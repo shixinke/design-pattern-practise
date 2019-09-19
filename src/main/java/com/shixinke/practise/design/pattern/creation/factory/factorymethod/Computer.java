@@ -1,11 +1,10 @@
-package com.shixinke.practise.design.pattern.creation.factory.simplefactory;
+package com.shixinke.practise.design.pattern.creation.factory.factorymethod;
 
 /**
- * 电脑(接口)
+ * 抽象电脑类
  * @author shixinke
  */
 public interface Computer {
-
     /**
      * 获取电脑的名称(型号)
      * @return
