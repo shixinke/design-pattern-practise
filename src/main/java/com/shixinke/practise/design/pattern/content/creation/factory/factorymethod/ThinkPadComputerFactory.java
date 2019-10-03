@@ -2,6 +2,7 @@ package com.shixinke.practise.design.pattern.content.creation.factory.factorymet
 
 /**
  * ThinkPad电脑工厂
+ * @author shixinke
  */
 public class ThinkPadComputerFactory implements ComputerFactory {
     public Computer produce() {

@@ -1,5 +1,9 @@
 package com.shixinke.practise.design.pattern.content.creation.factory.abstractfactory;
 
+/**
+ * 测试类
+ * @author shixinke
+ */
 public class FactoryTest {
 
     public static void main(String[] args) {
