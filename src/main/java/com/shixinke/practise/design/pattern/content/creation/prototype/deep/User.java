@@ -1,10 +1,8 @@
 package com.shixinke.practise.design.pattern.content.creation.prototype.deep;
 
-import java.util.Date;
-import java.util.List;
 
 /**
- * 用户实体
+ * 用户实体(原型对象)
  * @author shixinke
  */
 public class User implements Cloneable {
@@ -26,9 +24,6 @@ public class User implements Cloneable {
      */
     private Address address;
 
-    private List<Long> prettyIds;
-
-    private Date birthday;
 
     public User(Long userId, String nickname, String mobile, Address address) {
         this.userId = userId;
@@ -69,25 +64,12 @@ public class User implements Cloneable {
         this.address = address;
     }
 
-    public List<Long> getPrettyIds() {
-        return prettyIds;
-    }
-
-    public void setPrettyIds(List<Long> prettyIds) {
-        this.prettyIds = prettyIds;
-    }
-
-    public Date getBirthday() {
-        return birthday;
-    }
-
-    public void setBirthday(Date birthday) {
-        this.birthday = birthday;
-    }
 
     public Object clone() {
         try {
-            return super.clone();
+            User user =  (User)super.clone();
+            user.address = (Address)this.address.clone();
+            return user;
         } catch (CloneNotSupportedException e) {
             System.out.println("克隆失败");
             return null;

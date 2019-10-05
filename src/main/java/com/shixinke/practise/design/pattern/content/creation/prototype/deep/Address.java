@@ -4,7 +4,7 @@ package com.shixinke.practise.design.pattern.content.creation.prototype.deep;
  * 用户收货地址
  * @author shixinke
  */
-public class Address {
+public class Address implements Cloneable {
     /**
      * 地址ID
      */
@@ -34,5 +34,18 @@ public class Address {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    /**
+     * 重写clone方法
+     * @return
+     */
+    public Object clone() {
+        try {
+            return super.clone();
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 }
