@@ -2,7 +2,7 @@ package com.shixinke.practise.design.pattern.content.structural.adapter.classada
 
 /**
  * MySQL数据
- * @author jiangfangtao
+ * @author shixinke
  */
 public class MySqlData {
     /**
